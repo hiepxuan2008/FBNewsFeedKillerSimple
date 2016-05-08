@@ -1,0 +1,25 @@
+{
+    // Required
+    "manifest_version": 2,
+    "name": "FB NewsFeed Killer",
+    "version": "1.0",
+    // Recommended
+    "description": "Kill news feed in facebook",
+    "icons": {
+        "128": "images/icon.png"
+    },
+    // Browser action
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "FB NewsFeed Killer",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+        "css": ["style.css"],
+        "js": ["jquery.js", "script.js"]
+    }]
+}
